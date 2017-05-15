@@ -1,5 +1,6 @@
-package com.nadasanders.pojo;
+package com.nadasanders.repository;
 
+import com.nadasanders.pojo.User;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -7,4 +8,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface UserRepository extends CrudRepository<User,Long> {
 
+    User findDistinctByUserNameAndPassword(String userName, String password);
 }
