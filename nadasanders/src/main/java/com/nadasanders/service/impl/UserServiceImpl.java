@@ -1,7 +1,7 @@
 package com.nadasanders.service.impl;
 
 import com.nadasanders.pojo.User;
-import com.nadasanders.repository.UserRepository;
+import com.nadasanders.nadasanders.UserRepository;
 import com.nadasanders.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User authenticateUser(String userName, String password) {
-        User verifiedUser = userRepository.findDistinctByUserNameAndPassword(userName, password);
-        return verifiedUser;
+        return userRepository.findDistinctByUserNameAndPassword(userName, password);
     }
 }
