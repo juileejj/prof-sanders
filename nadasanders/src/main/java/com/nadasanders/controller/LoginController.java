@@ -3,7 +3,6 @@ package com.nadasanders.controller;
 import com.nadasanders.pojo.User;
 import com.nadasanders.pojo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
