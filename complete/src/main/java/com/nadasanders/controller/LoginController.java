@@ -1,6 +1,8 @@
 package com.nadasanders.controller;
 
+import com.nadasanders.entity.ContactEntity;
 import com.nadasanders.pojo.User;
+import com.nadasanders.service.ContactService;
 import com.nadasanders.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +18,6 @@ import java.io.IOException;
 public class LoginController {
     @Autowired
     private UserService userService;
-
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public @ResponseBody
