@@ -1,0 +1,65 @@
+
+<div class="container"  ng-controller="BlogController" data-ng-init="getBlogs()">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="jobs-sidebar-nav sidebar-nav">
+                <div class="navbar navbar-default" data-spy="affix" data-offset-top="197" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".sidebar-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#/dashboard/users">Users</a></li>
+                            <li class="active"><a href="#/dashboard/blogs">Blog</a></li>
+                            <li><a href="#/dashboard/jobs">Jobs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9" id="jobs" ng-controller="BlogController">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="text-left"> Blogs
+                        <a href="#/dashboard/createblog"><button type="button" class="glyphicon-button text-right">
+                            <span class="glyphicon glyphicon-plus green" style="position: inherit;"></span></button></a>
+                    </h3>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="list-group">
+                        <li class="jobs-list-group-item list-group-item" ng-repeat="blog in blogs">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <a href="#/dashboard/blogs" class="details" title="View Details" data-toggle="collapse" data-target="#demo{{$index}}">
+                                        {{blog.title}}
+                                        <span class="drop glyphicon glyphicon-circle-arrow-down"  title="Description">
+                                    </span></a>
+                                </div>
+                                <div class="panel-body collapse" id="demo{{$index}}">
+                                    <div class="row">
+                                        <div class ="col-md-12"><img class="img img-responsive"><img
+                                                src="../images/banner1-vertical.jpg" height="300" width="600" /></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class ="col-md-12">{{blog.content}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/dashboard-scripts.js"></script>
