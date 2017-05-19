@@ -10,20 +10,19 @@ import java.io.IOException;
 /**
  * Created by Juilee on 5/15/2017.
  */
-
+@CrossOrigin
 @RestController
 public class LoginController {
     @Autowired
     private UserService userService;
 
-
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public @ResponseBody
-    User authenticateUser(@RequestParam String userName,
+    User authenticateUser(@RequestParam String email,
                           @RequestParam String password,
                           HttpServletResponse response) throws IOException {
 
-        User authenticatedUser = userService.authenticateUser(userName, password);
+        User authenticatedUser = userService.authenticateUser(email, password);
         if (authenticatedUser != null) {
             return authenticatedUser;
         } else {
