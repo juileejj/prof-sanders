@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard : Login</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-social.css" rel="stylesheet">
+    <link href="../../css/dashboard_styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <form class="form-signin" ng-app="mainController" ng-controller="LoginController" ng-submit="login()">
+            <h2 class="form-signin-heading">Login</h2>
+            <input type="text" class="form-control" ng-model="email" placeholder="Email Address"  />
+            <input type="password" class="form-control" ng-model="password" placeholder="Password" />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            </label>
+            <!--<a href="../dashboard.html">HREF TEST</a>-->
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </form>
+    </div>
+</div>
+<script src="../../js/angular.min.js"></script>
+<script src="../../js/controller/dashboardController.js"></script>
+<script src="../../js/controller/dashboard-app.js"></script>
+<script src="../../js/angular-route.min.js"></script>
+
+</body>
+</html>

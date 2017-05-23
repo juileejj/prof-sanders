@@ -8,7 +8,7 @@ import org.apache.commons.mail.SimpleEmail;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by ajinkya on 5/17/17.
+ * Created by Juilee on 5/17/17.
  */
 @Service
 public class ContactServiceImpl implements ContactService {

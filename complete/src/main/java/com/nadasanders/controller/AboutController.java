@@ -2,6 +2,8 @@ package com.nadasanders.controller;
 
 import com.nadasanders.entity.AboutEntity;
 import com.nadasanders.pojo.About;
+import com.nadasanders.pojo.User;
+import com.nadasanders.repository.AboutRepository;
 import com.nadasanders.service.AboutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,14 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by ajinkya on 5/20/17.
+ * Created by Juilee on 5/20/17.
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/about")
 public class AboutController {
 
     @Autowired
     private AboutService aboutService;
+    @Autowired
+    private AboutRepository aboutRepository;
 
     @PostMapping
     public About addAbout(@RequestBody AboutEntity aboutEntity, HttpServletResponse response) throws IOException {
@@ -50,5 +55,10 @@ public class AboutController {
             response.sendError(404, "Can not locate record in database");
             return false;
         }
+    }
+    @GetMapping(path = "/all")
+    public @ResponseBody
+    Iterable<About> getAllUsers() {
+        return aboutRepository.findAll();
     }
 }

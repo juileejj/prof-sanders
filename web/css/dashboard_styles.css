@@ -41,43 +41,41 @@ input[type="password"] {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-.navbar {
-    width: 100%;
-    z-index: 100;
 
-}
-
-.navbar-default .navbar-brand
+main
 {
-    color: #ffffff;
-    margin: 0;padding: 0;
+    vertical-align: middle;
+    height: 100vh;
+    padding-top: 10vh;
 }
-
-.navbar-default
-{
-    background: #2A3132;
+.sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
 }
-
-.navbar-default .navbar-nav > li > a:hover
-{
-    color: #90AFC5;
-    background: #000000;
+.sidebar-nav .navbar ul {
+    float: none;
+    display: block;
 }
-
-.navbar-default .navbar-nav > li > a
+.sidebar-nav .navbar li {
+    float: none;
+    display: block;
+}
+.sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
 {
-
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.sidebar-nav .navbar li a:hover {
+    background: #68829e;
     color: #ffffff;
     font-weight: bold;
 }
 
-.navbar-brand > img
-{
-    width: 150px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-}
 .navbar-top-links {
     margin-right: 0;
 }
@@ -107,6 +105,39 @@ input[type="password"] {
 .navbar-top-links .dropdown-user {
     right: 0;
     left: auto;
+}
+table.glyphicon-hover tbody .glyphicon {
+    visibility: hidden;
+}
+table.glyphicon-hover tbody tr:hover .glyphicon {
+    visibility: visible;
+}
+.glyphicon-button
+{
+    -webkit-appearance: none;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+
+.glyphicon {
+    top: 5px;
+}
+.white
+{
+    color: #ffffff;
+}
+.green
+{
+    color: #1c941e;
+}
+.gray
+{
+    color: #5e5e5e;
+}
+.red
+{
+    color:#ff0000;
 }
 .copyright {
     text-transform: uppercase;

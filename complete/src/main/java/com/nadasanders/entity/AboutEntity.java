@@ -1,7 +1,7 @@
 package com.nadasanders.entity;
 
 /**
- * Created by ajinkya on 5/20/17.
+ * Created by Juilee on 5/20/17.
  */
 public class AboutEntity {
     private String title;

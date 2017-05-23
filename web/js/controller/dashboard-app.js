@@ -6,13 +6,13 @@ var myApp = angular.module("myApp", [
     "mainController"
 ]);
 myApp.config(["$routeProvider", function($routeProvider){
-    $routeProvider.when("/dashboard", {
-        templateUrl: "about.html",
+    $routeProvider.when("/dashboard/", {
+        templateUrl: "partials/about.html",
         controller: "AboutController"
     }).when("/dashboard/about", {
         templateUrl: "partials/about.html",
         controller: "AboutController"
     }).otherwise({
-        redirectTo: "/dashboard"
+        redirectTo: "/dashboard/"
     })
 }])

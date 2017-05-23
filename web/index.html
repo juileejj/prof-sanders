@@ -8,7 +8,7 @@
     <link href="css/bootstrap-social.css" rel="stylesheet">
 
 </head>
-<body>
+<body ng-app="indexController">
 
 <div>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -55,22 +55,26 @@
             </div>
         </div>
     </div>
-    <div class="about" id="about">
+    <div class="about" id="about" ng-controller="GetAboutController" data-ng-init="getAbouts()">
         <div class="container">
             <header>
                 <h3>About</h3>
             </header>
-            <div class="row">
-                <div class="col-sm-3">
-                </div>
-            </div>
+
+
+            <br>
             <div class="row">
                 <div class="col-sm-3">
                     <br>
                     <img src="images/Sanders%20Cropped%20Photo%20copy.jpg" class="about-image" width="250" height="320">
                 </div>
                 <div class="col-sm-9">
-                    <h3>Teacher and Scholar</h3>
+                    <div ng-repeat="about in abouts">
+                        <h3>{{about.title}}</h3>
+                        <p>{{about.content}}</p>
+                    </div>
+                    <br>
+                   <!-- <h3>Teacher and Scholar</h3>
                     <p>Dr. Sanders is an internationally recognized thought leader and expert in forecasting, predictive
                         analytics, risk management and supply chain management. Her expertise is in identifying best
                         practices in forecasting, developing a corporate technology strategy, and creating a resilient
@@ -89,9 +93,9 @@
                         of Business, Texas Christian University, where she was also Research Director of the Supply and
                         Value Chain Center. She holds a Ph.D. in Operations Management and Logistics, and an MBA, from
                         the Fisher College of Business at The Ohio State University, as well as a B.S. in Mechanical
-                        Engineering.</p>
+                        Engineering.</p>-->
                 </div>
-                <div class="col-sm-12">
+               <!-- <div class="col-sm-12">
                     <h3>Thought Leader</h3>
                     <p>Throughout her career Dr. Sanders has successfully held a range of leadership roles in both
                         academic and professional organizations and has served on numerous executive boards. She has
@@ -122,9 +126,9 @@
                         Castle, UK. This retreat brought together a small diverse group of international leaders
                         identified to have ‘star quality’ in order to develop strategies to impact society in the coming
                         decade.</p>
-                </div>
+                </div>-->
             </div>
-            <hr>
+            <br>
             <div class="row">
                 <div class="col-md-4">
                     <div class="panel panel-primary">
@@ -141,6 +145,7 @@
                     </div>
                 </div>
             </div>
+            <hr>
         </div>
     </div>
     </div>
@@ -148,22 +153,30 @@
     <div class="about-icons">
         <div class="container">
             <div class="row">
-                <img src="images/5db2d0ad3d011c070a4ec13b4237a0ab_olympic-motivational-speaker-dell-logo-clip-art_2778-2769.jpeg"/>
-                <img src="images/2793878_international-data-group-idg-logo-100704676-large.jpg"/>
-                <img src="images/A-and-T-logo-vector.png"/>
-                <img src="images/apics%20new%20logo.PNG"/>
-                <img src="images/carnival-logo.png"/>
-                <img src="images/cscmp_logo.jpg"/>
-                <img src="images/download.png"/>
-                <img src="images/dsi.png"/>
-                <img src="images/harvard.png"/>
-                <img src="images/INFORMS-3.jpg"/>
-                <img src="images/ISM.png"/>
-                <img src="images/Jones_Day_Logo_1.svg.png"/>
-                <img src="images/LEGO_logo.jpg"/>
-                <img src="images/nike.png"/>
-                <img src="images/Schottenstein_Stores_Corp_Logo.jpg"/>
-                <img src="images/poms_logo.jpg"/>
+                <img src="images/logos/5db2d0ad3d011c070a4ec13b4237a0ab_olympic-motivational-speaker-dell-logo-clip-art_2778-2769.jpeg"/>
+                <img src="images/logos/2793878_international-data-group-idg-logo-100704676-large.jpg"/>
+                <img src="images/logos/A-and-T-logo-vector.png"/>
+                <img src="images/logos/apics%20new%20logo.PNG"/>
+                <img src="images/logos/carnival-logo.png"/>
+                <img src="images/logos/cscmp_logo.jpg"/>
+                <img src="images/logos/download.png"/>
+                <img src="images/logos/dsi.png"/>
+                <img src="images/logos/harvard.png"/>
+                <img src="images/logos/INFORMS-3.jpg"/>
+                <img src="images/logos/ISM.png"/>
+                <img src="images/logos/Jones_Day_Logo_1.svg.png"/>
+                <img src="images/logos/LEGO_logo.jpg"/>
+                <img src="images/logos/nike.png"/>
+                <img src="images/logos/Schottenstein_Stores_Corp_Logo.jpg"/>
+                <img src="images/logos/poms_logo.jpg"/>
+
+                <img src="images/logos/mtc.jpg"/>
+                <img src="images/logos/ESI.jpg"/>
+                <img src="images/logos/portallogo.jpg"/>
+                <img src="images/logos/KCPL-logo.jpg"/>
+                <img src="images/logos/bose-logo-vector.png"/>
+                <img src="images/logos/logo.jpg"/>
+
             </div>
         </div>
     </div>
@@ -510,4 +523,5 @@
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.min.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/controller/indexController.js"></script>
 </html>

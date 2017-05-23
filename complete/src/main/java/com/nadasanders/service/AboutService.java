@@ -4,7 +4,7 @@ import com.nadasanders.entity.AboutEntity;
 import com.nadasanders.pojo.About;
 
 /**
- * Created by ajinkya on 5/20/17.
+ * Created by Juilee on 5/20/17.
  */
 public interface AboutService {
     /**

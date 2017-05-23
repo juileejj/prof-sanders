@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by ajinkya on 5/17/17.
+ * Created by Juilee on 5/17/17.
  */
 @RestController
 @RequestMapping("/contact")

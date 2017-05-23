@@ -16,7 +16,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(path = "/login", method = RequestMethod.POST)
+    @RequestMapping(path = "/login", method = RequestMethod.GET)
     public @ResponseBody
     User authenticateUser(@RequestParam String email,
                           @RequestParam String password,
