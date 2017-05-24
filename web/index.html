@@ -29,7 +29,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#speaking">Speaking</a></li>
-                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#articles">Publications</a></li>
                     <li><a href="#books">Books</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -144,6 +144,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-8">
+                    <h2>Comments -</h2>
+                    <h3>"Fantastic presenter with great content!” </h3>&nbsp;
+                    <h3>“<b>Superb</b> speaker” </h3>&nbsp;
+                    <h3>“<b>EXCELLENT</b> speaker, topic, and presentation!” </h3>&nbsp;
+                    <h3>“Absolutely loved it! A clear useable perspective and checklist to always keep in mind”</h3>&nbsp;
+                </div>
             </div>
             <hr>
         </div>
@@ -180,7 +187,7 @@
             </div>
         </div>
     </div>
-    <div class="speaking" id="speaking">
+    <div class="speaking" id="speaking" ng-controller="GetSpeakController" data-ng-init="getSpeakings()">
         <div class="container">
             <header>
                 <h3>Speaking</h3>
@@ -188,8 +195,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="//player.vimeo.com/video/68866759"
-                                allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://05-lvl3-pdl.vimeocdn.com/01/4883/4/124417764/354422622.mp4?expires=1495636173&amp;token=02dabc89d75140260635a" allowfullscreen data-pause="true"></iframe>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -198,35 +204,155 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <br>
+                <div class="col-sm-12">
+                <p>Nada has given hundreds of presentations offering cutting edge insights and best
+
+                practices. Her speaking topics cover a wide range of areas critical to successful
+
+                business leaders. She speaks to thousands of people each year, offering
+
+                countless business examples and a message with easy to remember key take-
+
+                aways.
+                </p>
+                <p>
+                Sample of presentation titles she has given:
+                </p>
+
+                <h4><a href="http://www.supplychainbrain.com/content/nc/videos/2013-videos/cscmp-2013/why-the-focus-on-big-data/">SUPPLY-CHAIN BRAIN</a> </h4>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                <h3>
+                BIG DATA ANALYTICS
+                </h3>
+                <p>-Creating the Intelligent Supply Chain</p>
+
+                <p>-Big Data and Analytics Driven Supply Management: A Framework</p>
+
+                <p>-A Framework for Implementing Analytics</p>
+
+                <p>-Turning Information Into Intelligence</p>
+
+                <p>-Big Data Driven Supply Chain Management</p>
+
+                <p>-What are the Big Data Analytics Applications?</p>
+                </div>
+                <div class="col-md-4">
+               <h3>FORECASTING</h3>
+
+                <p>-Forecasting in Times of Change</p>
+
+                <p>-Improving Forecast Accuracy to Achieve a Competitive Advantage</p>
+
+                <p>-Tailoring Your Forecasting Methods to Improve Accuracy</p>
+
+                <p>-How to Make Better Forecasts</p>
+
+                <p>-Combining Management Insight with Analytics for Optimal Accuracy</p>
+
+                <p>-Technology and Managers Team for Accurate Forecasting</p>
+
+                </div>
+                <div class="col-md-4">
+                <h3>CHANGE LEADERSHIP</h3>
+
+                <p>-Crisis Management</p>
+
+                <p>-Leading Transformational Change</p>
+
+                <p>-Becoming an Analytics Competitor</p>
+
+                <p>-Preparing for Disruptions With Analytics</p>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="articles" id="articles">
         <div class="container">
             <header>
-                <h3></h3>
+                <h3>Publications</h3>
             </header>
             <div class="row">
-            <div class="panel panel-info">
-                <div class="panel-heading">Articles</div>
-                <div class="panel-body"></div>
-            </div>
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse1">
+                                    BOOK CHAPTERS
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">Sanders, N.R. “Forecasting: State-of-the-Art in Research and Practice” in Routledge Companion for Production and Operations Management (POM), Martin Starr and Sushil Gupta, 2017, 45-62.Sanders, N.R. “Forecasting: State-of-the-Art in Research and Practice” in Routledge Companion for Production and Operations Management (POM), Martin Starr and Sushil Gupta, 2017, 45-62.</a>
+                                    <a href="#" class="list-group-item">Autry, C. W. and Sanders, N. R. “Supply Chain Security: A Dynamic Capabilities Approach to Business Continuity,” in Supply Chain Risk: A Handbook of Assessment, Management, and Performance, George A. Zsidisin and Bob Ritchie (eds), (Springer Science), 2008, 307-328.</a>
+                                    <a href="#" class="list-group-item">Sanders, N. R. and Ritzman, L.P. "Judgmental Adjustment of Statistical Forecasts," in Principles of Forecasting: A Handbook for Researchers and Practitioners, J. Scott Armstrong (ed),  (Kluwer Academic Publishers), 2001, 405-416.</a>
+                                    <a href="#" class="list-group-item">Sanders, N. R. “Forecasting: Guidelines and Methods,” Encyclopedia of Production and Manufacturing Management, Paul M. Swamidass (ed), (Kluwer Academic Publishers), 2000</a>
+                                    <a href="#" class="list-group-item">Sanders, N. R. “Forecasting Theory,” in Encyclopedia of Electrical and Electronics
+                                        Engineering, John G. Webster (ed), (John Wiley & Sons), Volume 7, l999, 664-675.
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse2">REFEREED JOURNAL PUBLICATIONS </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">Sanders, N.R. “Forecasting: State-of-the-Art in Research and Practice” in Routledge Companion for Production and Operations Management (POM), Martin Starr and Sushil Gupta, 2017, 45-62.Sanders, N.R. “Forecasting: State-of-the-Art in Research and Practice” in Routledge Companion for Production and Operations Management (POM), Martin Starr and Sushil Gupta, 2017, 45-62.</a>
+                                    <a href="http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1937-5956/accepted" class="list-group-item">Gu, T., Sanders, N.R, and A. Venkateswaran, “CEO Incentives and Customer-Supplier Relations,” Production and Operations Management, forthcoming, 2017.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse3">PUBLISHED COMMENTARIES</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">Sanders, N.R. “Forecasting: State-of-the-Art in Research and Practice” in Routledge Companion for Production and Operations Management (POM), Martin Starr and Sushil Gupta, 2017, 45-62.Sanders, N.R. “Forecasting: State-of-the-Art in Research and Practice” in Routledge Companion for Production and Operations Management (POM), Martin Starr and Sushil Gupta, 2017, 45-62.</a>
+                                    <a href="http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1937-5956/accepted" class="list-group-item">Gu, T., Sanders, N.R, and A. Venkateswaran, “CEO Incentives and Customer-Supplier Relations,” Production and Operations Management, forthcoming, 2017.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="books" id="books">
+    <div class="books" id="books" ng-controller="GetBookController" data-ng-init="getBooks();">
         <div class="container">
             <header>
                 <h3>Author</h3>
             </header>
             <div class="row">
-                <div class="col-md-4 block">
+                <div class="col-md-4 block" ng-repeat="book in books">
                     <div class="circle">
-                        <a href="https://www.amazon.com/Data-Driven-Supply-Chain-Management/dp/0133801284/ref=la_B0055JD684_1_5?s=books&ie=UTF8&qid=1410447002&sr=1-5"><img
-                                src="images/1.jpg"
+                        <a href="{{book.link}}"><img
+                                src="{{book.imageUrl}}"
                                 class="img-books"/></a>
                     </div>
                 </div>
-                <div class="col-md-4 block">
+               <!-- <div class="col-md-4 block">
                     <div class="circle">
                         <a href="https://www.amazon.com/Forecasting-Fundamentals-Nada-Sanders-ebook/dp/B01MQIKZUX/ref=sr_1_1?s=books&ie=UTF8&qid=1492319112&sr=1-1&keywords=Forecasting+Fundamentals%2C+Business+Expert+Press%2C+2016"><img
                                 src="images/2.jpg"
@@ -239,9 +365,9 @@
                                 src="images/3.JPG"
                                 class="img-books"/></a>
                     </div>
-                </div>
+                </div>-->
             </div>
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-md-4 block">
                     <div class="circle">
                         <a href="https://www.amazon.com/Foundations-Sustainable-Business-Function-Strategy/dp/1118441044/ref=la_B0055JD684_1_11?s=books&ie=UTF8&qid=1410447002&sr=1-11"><img
@@ -263,11 +389,14 @@
                                 class="img-books"/></a>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="testimonials" id="testimonials">
         <div class="container">
+            <header>
+                <h3>Testimonials</h3>
+            </header>
             <div class="row" id="recs">
                 <div class="test">
                     <div class="panel panel-default">
@@ -507,11 +636,6 @@
     <div class="footer-below">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-xs-12 pull-right">
-                    <a href="#">Privacy</a>
-                    <a href="#">Legal</a>
-                    <a href="#">Terms</a>
-                </div>
                 <div class="col-sm-6 col-xs-12 pull-left">&copy; 2017 NRS, LLC</div>
             </div>
         </div>

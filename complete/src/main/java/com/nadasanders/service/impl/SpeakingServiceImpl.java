@@ -19,7 +19,7 @@ public class SpeakingServiceImpl implements SpeakingService {
 
     @Override
     public Speaking addSpeaking(SpeakingEntity toSave) {
-        Speaking toPersist = new Speaking(toSave.getVideoUrl());
+        Speaking toPersist = new Speaking(toSave.getTitle(),toSave.getVideoUrl());
         toPersist = speakingRepository.save(toPersist);
         return toPersist;
     }
@@ -45,7 +45,6 @@ public class SpeakingServiceImpl implements SpeakingService {
 
     @Override
     public Iterable<Speaking> getAll() {
-      Iterable<Speaking> speakingIterable= speakingRepository.findAll();
-      return speakingIterable;
+     return speakingRepository.findAll();
     }
 }

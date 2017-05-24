@@ -1,4 +1,4 @@
-<div class="container" data-ng-controller="TestController" data-ng-init="getTests()">
+<div class="container" data-ng-controller="SpeakingController" data-ng-init="getSpeakings()">
     <div class="row">
         <div class="col-md-3">
             <div class="sidebar-nav">
@@ -16,50 +16,48 @@
                         <ul class="nav navbar-nav">
                             <li><a href="#/dashboard/">Home</a></li>
                             <li><a href="#/dashboard/about">About</a></li>
-                            <li><a href="#/dashboard/speaking">Speaking</a></li>
+                            <li class="active"><a href="#/dashboard/speaking">Speaking</a></li>
                             <li><a href="#/dashboard/book">Books</a></li>
-                            <li  class="active"><a href="#/dashboard/testimonial">Testimonials</a></li>
+                            <li><a href="#/dashboard/testimonial">Testimonials</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-9" id="test">
+        <div class="col-md-9" id="speaking">
             <table class="table table-hover glyphicon-hover" data-pagination="true">
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Designation</th>
-                    <th>Content</th>
+                    <th>Title</th>
+                    <th>Video URL</th>
                     <th>
-                        <button type="button" class="glyphicon-button" id="addTest">
+                        <button type="button" class="glyphicon-button" id="addSpeaking">
                             <span class="glyphicon glyphicon-plus green"></span></button>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="test in tests" id="{{test.id}}">
-                    <td><b>{{test.name}}</b></td>
-                    <td>{{test.designation}}</td>
-                    <td>{{test.content}}</td>
+                <tr ng-repeat="speaking in speakings" id="{{speaking.id}}">
+                    <td><b>{{speaking.title}}</b></td>
+                    <td>{{speaking.videoUrl}}</td>
                     <td><a href="#" ng-click=""><span
                             class="glyphicon glyphicon-pencil gray"></span></a>&nbsp;
-                        <a href="#" id="deleteBook"><span
-                                class="glyphicon glyphicon-remove red" ng-click="deleteTest(test.id);"></span></a></td>
+                        <a href="#" id="deletespeaking"><span
+                                class="glyphicon glyphicon-remove red" ng-click="deleteSpeaking(speaking.id)"></span></a></td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="modal fade" id="addTestModal" role="dialog">
+    <div class="modal fade" id="addSpeakingModal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form id="addTestForm" name="addTestForm" ng-model="addTestModal" method="post"
-                      data-ng-submit="addTest();"
+                <form id="addSpeakingForm" name="addSpeakingForm" ng-model="addSpeakingModal" method="post"
+                      data-ng-submit="addSpeaking();"
                       novalidate>
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h1 class="modal-title">Testimonial</h1>
+                        <h1 class="modal-title">Speaking Video</h1>
                         <div class="alert alert-success add-about-success-alert">
                             <strong>Success!</strong> {{msg}}
                         </div>
@@ -69,23 +67,10 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="name" class="control-label">Name:</label>
-                            <input type="text" class="form-control" id="name" name="name"
-                                   ng-pattern="/^[a-zA-Z]*$/" ng-required="true" ng-model="testimonial.name"
-                                   placeholder="Name"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="designation" class="control-label">Designation:</label>
-                            <input type="text" class="form-control" id="designation" name="designation"
-                                   ng-pattern="/^[a-zA-Z]*$/" ng-required="true" ng-model="testimonial.designation"
-                                   placeholder="Designation"/>
-                        </div>
-                        <div class="form-group">
-
-                            <div class="form-group">
-                                <input type="file" name="files[]" id="js-upload-files" multiple>
-                            </div>
-                            <button type="button" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                            <label for="title" class="control-label">Title:</label>
+                            <input type="text" class="form-control" id="title" name="title"
+                                   ng-pattern="/^[a-zA-Z]*$/" ng-required="true" ng-model="speaking.title"
+                                   placeholder="Title"/>
                             <!-- <p class="error"
                                 ng-show="addUserForm.firstName.$error.required && addUserForm.firstName.$touched">
                                  Title is required</p>
@@ -94,10 +79,10 @@
                                  firstname</p>-->
                         </div>
                         <div class="form-group">
-                            <label for="content" class="control-label">Testimonial Content:</label>
-                            <textarea class="form-control" id="content" name="content"
-                                      placeholder="Content" ng-pattern="/^[a-zA-Z]*$/" ng-model="testimonial.content"
-                                      ng-required="true"/>
+                            <label for="videoUrl" class="control-label">Video URL:</label>
+                            <input type="text" class="form-control" id="videoUrl" name="videoUrl"
+                                   ng-pattern="/^[a-zA-Z]*$/" ng-required="true" ng-model="speaking.videoUrl"
+                                   placeholder="VideoUrl"/>
                             <!--<p class="error"
                                ng-show="addUserForm.lastName.$error.required && addUserForm.lastName.$touched">
                                 Lastname is required</p>
@@ -105,17 +90,7 @@
                                ng-show="addUserForm.lastName.$error.pattern && addUserForm.lastName.$touched">Invalid
                                 lastname</p>-->
                         </div>
-
-
-                        <!--<p class="error"
-                           ng-show="addUserForm.lastName.$error.required && addUserForm.lastName.$touched">
-                            Lastname is required</p>
-                        <p class="error"
-                           ng-show="addUserForm.lastName.$error.pattern && addUserForm.lastName.$touched">Invalid
-                            lastname</p>-->
-
                     </div>
-
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">Create</button>
                         <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>

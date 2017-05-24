@@ -51,4 +51,9 @@ public class BookController {
             return false;
         }
     }
+    @GetMapping(path = "/all")
+    public @ResponseBody
+    Iterable<Book> getAllBooks() {
+        return bookService.getAll();
+    }
 }

@@ -2,8 +2,17 @@ package com.nadasanders.entity;
 
 public class BookEntity {
 
+	private String name;
 	private String imageUrl;
 	private String link;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public String getImageUrl() {
 		return imageUrl;

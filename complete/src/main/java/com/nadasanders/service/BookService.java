@@ -28,5 +28,6 @@ public interface BookService {
      * @return true if deleted
      */
     Boolean deleteBook(Long id);
-	
+
+    Iterable<Book> getAll();
 }

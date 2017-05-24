@@ -16,7 +16,7 @@ public class BookServiceImpl implements BookService {
 
 	    @Override
 	    public Book addBook(BookEntity toSave) {
-	    	Book toPersist = new Book(toSave.getImageUrl(), toSave.getLink());
+	    	Book toPersist = new Book(toSave.getName(),toSave.getImageUrl(), toSave.getLink());
 	        toPersist = bookRepository.save(toPersist);
 	        return toPersist;
 	    }
@@ -39,4 +39,9 @@ public class BookServiceImpl implements BookService {
 	        }
 	        return Boolean.FALSE;
 	    }
+
+	@Override
+	public Iterable<Book> getAll() {
+		return bookRepository.findAll();
+	}
 }
